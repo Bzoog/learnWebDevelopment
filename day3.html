@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+   <link rel="stylesheet" href="style.css">
+
+
+   <title>الحاويات والخصائص</title>
+</head>
+ 
+<body dir="rtl">
+   <!-- 
+      -- div, header, main, footer, nav, section
+      id, class, style, hidden, title, dir, lang
+      ul
+      li
+      ol
+    -->
+
+   <main class="dark">
+      <span class="dark" id="turn_theme">فاتح</span>
+      <h1>الخصائص والحاويات وتقسيم الصفحة</h1>
+      <p>تقسيم صفحة html وتطبيق تنسيقات css عليها</p>
+
+      <div class="container">
+         <section>
+            <h2>لماذا نستخدم الحاويات</h2>
+            <p>تستخدم الحاويات لتنظيم مجموعة عناصر في الصفحة كمجموعة واحدة 
+               يمكن تطبيق التنسيقات عليها بشكل جماعي .
+               <br>
+               دعنا نضرب مثلا لتغير خلفية مجموعة من العبارات الى اللون الاخضر الشفاف كالتالي
+            </p>
+<pre><code class="language-html">&lt;h3>استخدامات الحاويات&lt;/h3>
+&lt;div style="background-color: #1805">
+      &lt;p>تستخدم لتجميع مجموعة من العناصر في مكان واحد&lt;/p>
+      &lt;p>تستخدم ايضاً من اجل تقسيم الصفحة&lt;/p>
+&lt;/div>
+</code>
+</pre>
+            <div class="output">
+               <h3>استخدامات الحاويات</h3>
+               <div style="background-color: #1805">
+                  <p>تستخدم لتجميع مجموعة من العناصر في مكان واحد</p>
+                  <p>تستخدم ايضاً من اجل تقسيم الصفحة</p>
+               </div>
+            </div>
+         </section>
+
+
+         <section>
+            <h2>الحاوية div</h2>
+            <p>هي الحاوية الاساسية في الصفحة وهي تغنيك عن باقي الحاويات ولكن استخدام باقي الحاويات لاسباب تتعلق 
+               بالاجهزة الخاصة بقارئات الشاشة وتسهيل الفهم لعناكب جوجل .
+            </p>
+         </section>
+
+         <section>
+            <h2>الحاويات واستخداماتها</h2>
+            <div class="table-container">
+               <table>
+                  <thead>
+                     <tr>
+                        <th>الحاوية</th>
+                        <th>استخداماتها</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="left">main</td>
+                        <td>يستعمل لاحتوى المحتوى الاساسي للصفحة</td>
+                     </tr>
+                     <tr>
+                        <td class="left">section</td>
+                        <td>يستخدم لتقسيم الصفحة الى اقسام ويفضل استعماله اذا كان القسم له عنوان</td>
+                     </tr>
+                     <tr>
+                        <td class="left">article</td>
+                        <td>الاستخدام يكون عند عمل مقالة مستقلة او محتوى للقراءة بشكل مستقل</td>
+                     </tr>
+                     <tr>
+                        <td class="left">nav</td>
+                        <td>تنظيم روابط التنقل اعلى الصفحة</td>
+                     </tr>
+                     <tr>
+                        <td class="left">header</td>
+                        <td>يستخدم لتحديد راس الصفحة او قسم منها</td>
+                     </tr>
+                     <tr>
+                        <td class="left">footer</td>
+                        <td>يستخدم لتحديد اسفل الصفحة او قسم منها</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <span class="note">يوجد المزيد من الحاويات وليست هذه جميعها</span>
+         </section>
+
+         <section>
+            <h2>الخصائص العامة</h2>
+            <p>الخصائص العامة هي الخصائص التي يمكن تطبيقها على اي وسم في لغة <span>html</span> .</p> 
+            <div class="table-container">
+               <table>
+                  <thead>
+                     <tr>
+                        <th>الخاصية</th>
+                        <th>الوصف</th>
+                        <th>القيم المقبولة</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </section>
+
+
+      </div>
+
+      <br><br>
+   </main>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+   <script src="main.js"></script>
+   <script>
+      hljs.highlightAll()
+   </script>
+
+
+   <footer>
+      <div class="sabha">
+         سبحان الله وبحمده<br>
+         سبحان الله العظيم
+      </div>
+      <span>عِلم</span>
+   </footer>
+</body>
+
+</html>

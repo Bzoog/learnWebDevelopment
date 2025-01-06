@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+   <link rel="stylesheet" href="style.css">
+
+   
+   <title>مدخل الى HTML</title>
+</head>
+<body dir="rtl">
+   <!-- 
+      -- comments
+      -- doctype
+      -- html : lang
+      -- body : dir
+      -- head
+      -- h1 -> h6
+    -->
+
+    <main class="dark">
+      <span class="dark" id="turn_theme">فاتح</span>
+      <h1>مدخل الى تطوير الويب</h1>
+      <p><span>الاسبوع الاول </span>من دورة تطوير الويب ، مقدمه عن لغة HTML</p>
+       <div class="container">
+
+
+
+         <section>
+            <h2>قبل البدء</h2>
+            <p>
+               لغة <span>HTML</span>: Hyper Text Markup Language
+               الوصفية من اسهل اللغات التي تساعد في تنسيق صفحات الانترنت . 
+               <span class="note">لغة HTML ليست حساسة لحالة الاحرف اي ان &lt;html> هي &lt;HTML> هي &lt;hTmL></span>
+            </p>
+            <p>للبدء في استخدام هذه اللغة قم بتحميل <a href="https://code.visualstudio.com/download">VS Code</a> ، ثم قم بانشاء مشروع جديد </p>
+         </section>
+
+
+         <section>
+            <h2>كيف يتم تنسيق صفحة HTML</h2>
+            <p>تنسيق صفحة <span>html</span> يتكون من ثلاثة وسوم اساسية وهي <span>html</span> , <span>head</span> , <span>body</span> ويعتبر الوسم <span>html</span> هو الوسم الاب لكل الصفحة .
+            </p>
+
+            <pre>
+<code class="language-html" id="id-1">&lt;!DOCTYPE html>
+&lt;html>
+   &lt;head>
+&lt;!-- write page info here -->
+   &lt;/head>
+
+   &lt;body>
+&lt;!--write page content here  -->
+   &lt;/body>
+&lt;/html>
+</code><button class="copy" onclick="copy('id-1', this)">نسخ</button>
+</pre>
+         </section>
+
+
+
+         <section>
+            <h2>الوسوم الاساسية</h2>
+            <p>
+               نقوم بعمل الصفحة بالكامل ما بين وسمي <span>html</span> ، وتنقسم الصفحة بنفسها الى قسمين 
+               القسم الاول وهو <span>head</span> وهذا القسم نقوم بوضع معلومات الصفحة من عنوان ووصف وغيرها من الاعدادات 
+               اما القسم الثاني وهو <span>body</span> هو الذي نقوم بوضع جميع المحتوى بداخله
+            </p>
+            <p>
+               الوسوم التوصيفية <span>meta</span> هي من الوسوم المهمة التي تتحكم باعدادات صفحتك
+               خصوصاً من يعرف ولو لمحة عن تقنيات الويب ومحركات بحث جوجل
+            </p>
+            <p>
+            في صفحات الويب دائماً ما يكون اتجاه الصفحة من اليسار الى اليمين ولتعديلها وجعلها من اليمين الى اليسار مناجل اللغة العربية يمكنك استعمال الخاصية <span>dir</span> واعطائها القيمة <span>rtl</span>  
+            </p>
+            <pre><code class="language-html">&lt;body dir="ltr"></code></pre>
+            <p>كما ان تحديد لغة الصفحة لمساعدة محركات البحث او تمكين الترجمة التلقائية من جوجل 
+               امر مهم جداً ويمكنك ذلك من خلال الخاصية التالية لوسم <span>html</span>
+               <pre><code class="language-html">&lt;html lang="ar"></code></pre>
+            </p>
+            <p>اخيراً الوسم <span>&lt;!DOCTYPE html></span> وهو الوسم الذي يحدد اصدار لغة <span>html</span> فعندما يتم كتابته يقوم المتصفح بمعاملة الصفحة الخاصة بك باعتبارها من الصفحات الحديثة 
+            والفرق بين الصفحات الحديثة<span>html 5</span> والقديمة هو دعم اللغة للعديد من المزايا مثل الفيديو والرسم وغيرها
+            </p>
+         </section>
+
+
+
+         <section>
+            <h2>العناوين </h2>
+            <p>يمكنك تقسيم صفحتك بشكل عام الى عدة اقسام باستخدام الحاويات الى سنتطرق لها لاحقاً في هذا
+                الدرس وعند تقسيم الصفحة الى اقسام تحتاج ان تضع عنواناً لكل قسم ،
+                 وايضاً من استخدامات العناوين هو تنضيم الصفحة ولديها الكثير من الاستخدامات التى لا يمكن حصرها</p>
+            <p>لدينا عدة انواع من العناوين (العناوين الرئيسية والفرعية ) وفي <span>html</span> تم ترتيب العناوين وترقيمها وهي <span>h1</span>, <span>h2</span>, <span>h3</span>, <span>h4</span>, <span>h5</span>, <span>h6</span> .
+            <br><span>h1</span> : يعتبر العنوان الرئيسي في الصفحة ويفضل استخدامه مره واحدة فقط</p>
+            <br>
+            <p>يفضل استعمال العناوين بشكل هرمي لتحسين عمليات البحث لدى جوجل</p>
+         </section>
+
+
+         <section>
+            <h2>المصطلحات</h2>
+            <div class="table-container">
+               <table>
+                  <thead>
+                     <tr>
+                        <td>الوسم/ الخاصية</td>
+                        <td>المعنى</td>
+                        <td>وصف</td>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="left">html</td>
+                        <td class="left">Hyper Text Markup Language</td>
+                        <td>يتم وضع جميع وسوم ومحتويات الصفحة بداخله</td>
+                     </tr>
+                     <tr>
+                        <td class="left">head</td>
+                        <td class="left">Head</td>
+                        <td>يتم عمل معلومات الصفحة فيه مثل عنوان الصفحة وايقونتها وايضاً ملفات التنسيقات css</td>
+                     </tr>
+                     <tr>
+                        <td class="left">body</td>
+                        <td class="left">Body</td>
+                        <td>يتم وضع محتوى الصفحة بداخله ، قد يكون المحتوى صوراً او نصوص او جداول الخ</td>
+                     </tr>
+                     <tr>
+                        <td class="left">h1 -> h6</td>
+                        <td class="left">header</td>
+                        <td>وضع عناوين رئيسية في الصفحة ويسهل عملية اكتشاف الصفحة من قبل عناكب جوجل</td>
+                     </tr>
+                     <tr>
+                        <td class="left">dir</td>
+                        <td class="left">Direction</td>
+                        <td>تحديد اتجاه الصفحة وتستقبل هذه الخاصية احدى القيم التالية 
+                           <br><span>rtl</span> Right To Left <br>
+                           <span>ltr</span> Left To Right<br>
+                           <span>auto</span> جعل المتصفح يحدد الاتجاه تلقائياً بناءً على اول حرف من النص
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="left">lang</td>
+                        <td class="left">Language</td>
+                        <td>تحديد لغة الصفحة لمساعدة قارئ الشاشة للمكفوفين او تمكين الترجمة التلقائية 
+                           الخ . يمكن لهذه الخاصية ان تكون قيمتها احد رموز اللغات مثل ar, en ...
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="left">&lt;!-- comment --></td>
+                        <td class="left">Comments</td>
+                        <td>كتابة تعليقات في الكود</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </section>
+         
+       </div>
+       <br><br>
+      
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <script src="main.js"></script>
+    <script>
+      hljs.highlightAll()
+    </script>
+    
+
+    <footer>
+      <div class="sabha">
+         سبحان الله وبحمده<br>
+         سبحان الله العظيم
+      </div>
+      <span>عِلم</span>
+    </footer>
+</body>
+</html>
+

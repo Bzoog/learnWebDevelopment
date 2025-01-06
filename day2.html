@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+   <link rel="stylesheet" href="style.css">
+
+   <title>الصور وتنسيق النصوص</title>
+</head>
+
+<!-- 
+      -- p, i, b, u, a, span, mark, del, em, strong
+      -- img
+      -- alt, src
+      -- height and width in image
+      -- href, target
+ -->
+<body dir="rtl">
+   <main class="dark">
+      <span class="dark" id="turn_theme">فاتح</span>
+      <h1>الصور وتنسيق النصوص</h1>
+      <p>عرض الصور وتنسيق النص في الصفحة</p>
+      <div class="container">
+
+
+
+         <section>
+            <h2>عرض الصور</h2>
+            <p>عرض الصور في صفحات الويب من الامور الضرورية لاضفاء الطابع الفني والعصري 
+               في الموقع . <br> لاضافة صورة في الموقع تستطيع استخدام الوسم <span>&lt;img></span> مع الخاصية <span>src</span> لتحديد مسار الصورة
+            </p>
+            <pre><code class="language-html">&lt;img src="html_logo.png"></code></pre>
+            <p>الامر السابق يعرض الصورة التي باسم <span>html_logo.png</span> في موقعك</p>
+         </section>
+
+
+
+         <section>
+            <h2>كيف اصل الى الصور ؟</h2>
+            <p>للوصول الى الصورة يجب ان تكون الصورة ضمن ملفات المشروع
+               ، وضمن ملفات المشروع يعني ان الصورة تكون بجانب ملف صفحة الموقع او بالمجلدات التي هي ضمن المشروع.
+            </p>
+            <p>بدلاً من ان تكون الصورة ضمن المشروع يمكنك عرض الصور من الانترنت باستخدام رابطها في الخاصية <span>src</span> .</p> <br>
+            <p>اذا فشل تحميل الصورة لاي سبب كأن يكون الرابط منتهي او ان مسار الصورة غير موجود
+               سيظهر رمز غريب على بدلاً من الصورة ويمكنك وضع وصف للصورة بجانب هذا الرمز باستخدام <span>alt</span> واكتب بداخله ما تريد عن الصورة ويفضل ان تكتب ماهي الصورة من اجل سهولة الاستخدام
+            </p>
+            <pre><code class="language-html">&lt;img src="wrong_path_to_html_logo.png" src="html logo"></code></pre>
+         </section>
+
+
+
+         <section>
+            <h2>الوصول الى المسارات</h2>
+            <p>رموز المسارات والتنقل بين المجلدات</p>
+            <div class="table-container">
+               <table>
+                  <thead>
+                     <tr>
+                        <td>الرمز</td>
+                        <td>وصف</td>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="left">../logo.png</td>
+                        <td>الرجوع الى المجلد الاب والوصول الى الصورة logo.png</td>
+                     </tr>
+                     <tr>
+                        <td class="left">./logo.png</td>
+                        <td>الحصول على الصورة logo.png من نفس المسار ، في هذه الحالة يجب ان تكون الصورة وملق الصفحة في نفس المجلد</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <span class="note">تظهر الصورة بالابعاد التي صُممت بها فقد يكون لديك صورة ابعادها <span dir="ltr">1200 x 920 </span>بكسل التي قد تظهر بشكل غير مرغوب ، لذلك يمكنك استعمال الخاصيتين width و height للتحكم بالابعاد او استخدام css للحصول على تحكم افضل
+         </section>
+
+      
+         <section>
+            <h2>تنسيق النصوص</h2>
+            <p>ستتعلم في هذه الفقرة تنسيق النص في صفحتك وجعله مائلاً او غامقاً او تحته خط</p>
+            <div class="table-container">
+               <table>
+                  <thead>
+                     <tr>
+                        <th>الوسم</th>
+                        <th>وصف</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="left">&lt;b></td>
+                        <td>تنسيق نص عريض وغامق <b>مثال</b> وتقابلها &lt;strong> التي تعمل نفس العمل ولكنها تفوق الوسم السابق بانها تساعد محركات البحث في الحصول على الكلمات المفتاحية المهمة في موقعك</td>
+                     </tr>
+                     <tr>
+                        <td class="left">&lt;i></td>
+                        <td>تنسيق نص مائل <i>مثال</i> وتقابلها &lt;em> التي تعمل نفس العمل ولكنها تفوق الوسم السابق بانها تساعد محركات البحث في الحصول على الكلمات المفتاحية المهمة في موقعك</td>
+                     </tr>
+                     <tr>
+                        <td class="left">&lt;u></td>
+                        <td>تنسيق نص تحته خط <u>مثال</u></td>
+                     </tr>
+                     <tr>
+                        <td class="left">&lt;span></td>
+                        <td> يسمح بتحديد جزء من النص بغرض السماح بتنسيقة باستخدام css مثال ( بز<span style="color: red;">وغ</span>) <br> ولا يقتصر على تحديد جزء من الكلمة فقط وانما يمكن تحديد عبارات كاملة باستخدامه</td>
+                     </tr>
+                     <tr>
+                        <td class="left">&lt;mark></td>
+                        <td>تنسيق علامة مائية على النصوص <mark>مثال</mark></td>
+                     </tr>
+                     <tr>
+                        <td class="left">&lt;del></td>
+                        <td>تنسيق خط بالوسط على النص <del>مثال</del></td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td>تنسيق <small>مثال</small></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </section>
+
+
+         <span class="note">لم نتطرق للكثير من التنسيقات لاننا سنتعلم الكثير من عن تنسيق النصوص في لغة css</span>
+         <section>
+            <h2>الروابط</h2>
+            <p>الروابط في <span>html</span> لا يمكن الاستغناء عنها فهي تمكنك من التنقل بين صفحاتك او الانتقال الى صفحات خارجية 
+            . <br> لعمل رابط في صفحتك يمكنك استخدام الوسم <span>&lt;a></span> مع استخدام الخاصية <span>href</span> ووضع الرابط قيمة لها كالاتي
+            </p>
+            <pre><code class="language-html">&lt;a href="AsemNajee.github.io/E3elm">صفحة علم&lt;/a></code></pre>
+            <div class="output">
+               <a href="AsemNajee.github.io/E3elm">صفحة علم</a>
+            </div>
+            <p>عند النقر على الزر سيتم فتح الصفحة التي في الرابط بدلاً من هذه الصفحة ولتجنب ذلك 
+               نقوم بالاستفادة من الخاصية <span>target</span> ونعطيها القيمة <span>_blank</span>
+            </p>
+            <pre><code class="language-html">&lt;a href="AsemNajee.github.io/E3elm" target="_blank">صفحة علم&lt;/a></code></pre>
+            <div class="output">
+               <a href="AsemNajee.github.io/E3elm" target="_blank">صفحة علم</a>
+            </div>
+         </section>
+
+<br><br>
+      </div>
+   </main>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <script src="main.js"></script>
+    <script>
+      hljs.highlightAll()
+    </script>
+
+<footer>
+   <div class="sabha">
+      سبحان الله وبحمده<br>
+      سبحان الله العظيم
+   </div>
+   <span>عِلم</span>
+</footer>
+</body>
