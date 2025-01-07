@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="../style.css">
 
 
    <title>الحاويات والخصائص</title>
@@ -15,10 +15,7 @@
 <body dir="rtl">
    <!-- 
       -- div, header, main, footer, nav, section
-      id, class, style, hidden, title, dir, lang
-      ul
-      li
-      ol
+      -- id, class, style, hidden, title, dir, lang
     -->
 
    <main class="dark">
@@ -100,6 +97,42 @@
          </section>
 
          <section>
+            <h2>المعرف الفريد id</h2>
+            <p>الخاصية id هي سمة تستخدم لتعيين معرف فريد لأي عنصر داخل الصفحة يجب أن تكون القيمة فريدة ولا تتكرر وتُستخدم في التعرف على العنصر في CSS أو JavaScript مثال <pre><code class="language-html">&lt;div id="header">&lt;/div></code></pre></p>
+         </section>
+
+
+         <section>
+            <h2>الاصناف class</h2>
+            <p>الخاصية class تُستخدم لتعيين اسم صنف أو مجموعة أصناف لعناصر ويمكن استخدام نفس الاسم مع عدة عناصر تُسهل تطبيق الأنماط باستخدام CSS أو استهداف العناصر جماعياً باستخدام JavaScript مثال <pre><code class="language-html">&lt;div class="container">&lt;/div></code></pre></p>
+         </section>
+
+         <section>
+            <h2>وسم التنسيقات style</h2>
+            <p>style تسمح بإضافة تنسيقات CSS مباشرة إلى العنصر تشمل القيم الألوان الخلفية الحواف والمحاذاة وغيرها لكنها ليست الطريقة المثلى لكتابة التنسيقات فغالباً ما سيتم استخدام الملفات المستقلة <pre><code class="language-html">&lt;p style="color: blue;">نص&lt;/p></code></pre></p>
+         </section>
+
+         <section>
+            <h2>وسم الاخفاء hidden</h2>
+            <p>hidden تُخفي العنصر من الظهور على الشاشة ولكنه يبقى موجوداً ويمكن التحكم في ظهوره أو إخفائه ديناميكياً عبر JavaScript (سنتعلم ذلك لاحقاً) مثال <pre><code class="language-html">&lt;span hidden>نص مخفي&lt;/span></code></pre></p>
+         </section>
+
+         <section>
+            <h2>وسم التلميح title</h2>
+            <p>title تُضيف وصفاً يظهر على شكل تلميح نصي عند تمرير مؤشر الفأرة فوق العنصر يُستخدم لتحسين تجربة المستخدم وتقديم معلومات إضافية حول العنصر مثال <pre><code class="language-html">&lt;a href="https://example.com" title="my site"> زيارة الرابط&lt;/a></code></pre></p>
+         </section>
+         
+         <section>
+            <h2>وسم اتجاه الصفحة dir</h2>
+            <p>dir تُحدد اتجاه النصوص داخل العنصر وتكون مفيدة للغات التي تتطلب اتجاه كتابة معين مثل العربية القيم الممكنة تشمل ltr لليسار إلى اليمين و rtl لليمين إلى اليسار مثال <pre><code class="language-html">&lt;p dir="rtl">مرحبا&lt;/p></code></pre></p>
+         </section>
+
+         <section>
+            <h2>وسم تحديد اللغة lang</h2>
+            <p>lang تُحدد اللغة المستخدمة في النص داخل العنصر تساعد المتصفحات ومحركات البحث على فهم اللغة لتحسين العرض والفهرسة مثال <pre><code class="language-html">&lt;p lang="en">Hello&lt;/p></code></pre></p>
+         </section>
+
+         <section>
             <h2>الخصائص العامة</h2>
             <p>الخصائص العامة هي الخصائص التي يمكن تطبيقها على اي وسم في لغة <span>html</span> .</p> 
             <div class="table-container">
@@ -107,15 +140,37 @@
                   <thead>
                      <tr>
                         <th>الخاصية</th>
-                        <th>الوصف</th>
                         <th>القيم المقبولة</th>
                      </tr>
                   </thead>
                   <tbody>
                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td class="left">id</td>
+                        <td>اي نص بدون مسافات</td>
+                     </tr>
+                     <tr>
+                        <td class="left">class</td>
+                        <td>اي نص بدون مسافات</td>
+                     </tr>
+                     <tr>
+                        <td class="left">style</td>
+                        <td>تنسيقات بلغة css</td>
+                     </tr>
+                     <tr>
+                        <td class="left">hidden</td>
+                        <td>لا يتم اسناد اي قيمة اليه</td>
+                     </tr>
+                     <tr>
+                        <td class="left">title</td>
+                        <td>اي نص باي لغة</td>
+                     </tr>
+                     <tr>
+                        <td class="left">dir</td>
+                        <td>rtl , ltr , auto</td>
+                     </tr>
+                     <tr>
+                        <td class="left">lang</td>
+                        <td>ar , en , اي رمز لغة اخر</td>
                      </tr>
                   </tbody>
                </table>
@@ -129,7 +184,7 @@
    </main>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 
-   <script src="main.js"></script>
+   <script src="../main.js"></script>
    <script>
       hljs.highlightAll()
    </script>

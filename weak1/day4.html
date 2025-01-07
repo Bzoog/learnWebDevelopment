@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+   <link rel="stylesheet" href="../style.css">
+
+   <title>القوائم</title>
+</head>
+<body dir="rtl">
+<!--    
+   ul
+   li
+   ol
+ -->
+   <main class="dark">
+      <span class="dark" id="turn_theme">فاتح</span>
+      <h1>القوائم في HTML</h1>
+      <p>القوائم هي عناصر تُستخدم لتنظيم المحتوى في شكل نقاط مرتبة (ordered) أو غير مرتبة (unordered). <br>
+         تساعد في جعل النصوص أسهل قراءة وتنظيماً.</p>
+      <!-- <p>القوائم المرتبة وغير المرتبة</p> -->
+      <div class="container">
+         <section>
+            <h2>القوائم غير المرتبة (Unordered Lists - ul)</h2>
+            <p> تُستخدم لعرض عناصر لا تحتاج إلى ترتيب أو تسلسل منطقي. يتم تمثيل العناصر بنقاط (Bullets) أو رموز.</p>
+         </section>
+<pre><code class="language-html">&lt;ul>
+      &lt;li>العنصر الأول&lt;/li>
+      &lt;li>العنصر الثاني&lt;/li>
+      &lt;li>العنصر الثالث&lt;/li>
+&lt;/ul>
+</code></pre>
+         <div class="output">
+            <ul>
+               <li>العنصر الأول</li>
+               <li>العنصر الثاني</li>
+               <li>العنصر الثالث</li>
+             </ul> 
+         </div>
+         <span class="note">النمط الافتراضي للنقاط: يظهر كدوائر مطموسة صغيرة.</span>
+
+         <hr>
+         <section>
+            <h2>القوائم المرتبة (Ordered Lists - ol)</h2>
+            <p>تُستخدم لعرض عناصر تتطلب ترتيباً أو تسلسلاً منطقيًا، مثل الخطوات أو الأولويات</p>
+         </section>
+<pre><code class="language-html">&lt;ol>
+      &lt;li>الخطوة الأولى&lt;/li>
+      &lt;li>الخطوة الثانية&lt;/li>
+      &lt;li>الخطوة الثالثة&lt;/li>
+&lt;/ol>
+</code></pre>
+
+         <div class="output">
+            <ol>
+               <li>الخطوة الأولى</li>
+               <li>الخطوة الثانية</li>
+               <li>الخطوة الثالثة</li>
+            </ol>
+         </div>
+         
+         <hr>
+         <section>
+            <h2>تخصيص القوائم المرتبة (ol)</h2>
+            <p> تغيير نوع الترقيم باستخدام سمة <span>type</span></p>
+         </section>
+<pre><code class="language-html">&lt;ol type="A">
+      &lt;li>الخطوة الأولى&lt;/li>
+      &lt;li>الخطوة الثانية&lt;/li>
+      &lt;li>الخطوة الثالثة&lt;/li>
+&lt;/ol>
+</code></pre>
+            <div class="output">
+               <ol type="A">
+                  <li>الخطوة الأولى</li>
+                  <li>الخطوة الثانية</li>
+                  <li>الخطوة الثالثة</li>
+               </ol>    
+            </div>
+
+            <hr>
+
+         <section>
+            <div class="table-container">
+               <table>
+                  <thead>
+                     <tr>
+                        <th>الخاصية</th>
+                        <th>الشرح</th>
+                        <th>القيم المتاحة</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="left">type</td>
+                        <td>تغير شكل النقاط في القائمة الغير مرتبة (ul)</td>
+                        <td>disc , circle , square</td>
+                     </tr>
+                     <tr>
+                        <td class="left">type</td>
+                        <td>تغير شكل النقاط في القائمة المرتبة (ol)</td>
+                        <td>
+                           <b>1 :</b> أرقام عربية (1, 2, 3). <br>
+                           <b>a :</b> حروف إنجليزية صغيرة (a, b, c). <br>
+                           <b>A :</b> حروف إنجليزية كبيرة (A, B, C). <br>
+                           <b>i :</b> أرقام رومانية صغيرة (i, ii, iii). <br>
+                           <b>I :</b> أرقام رومانية كبيرة (I, II, III). 
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="left">start</td>
+                        <td>تحديد الرقم الذي يبدأ منه الترقيم .</td>
+                        <td>رقم لبدء العد منه</td>
+                     </tr>
+                     <tr>
+                        <td class="left">reversed</td>
+                        <td>يجعل الترقيم يبدأ من الأخير ويتناقص.</td>
+                        <td>يتم تركه فارغاً</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </section>
+
+
+
+      </div>
+   </main>
+
+   <footer>
+      <div class="sabha">
+         سبحان الله وبحمده<br>
+         سبحان الله العظيم
+      </div>
+      <span>عِلم</span>
+   </footer>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+   <script src="../main.js"></script>
+   <script>
+      hljs.highlightAll()
+   </script>
+</body>
+</html>

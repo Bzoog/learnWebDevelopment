@@ -11,6 +11,15 @@
    transition: 0.3s;
 }
 
+hr {
+   margin: 20px 15px;
+   border: 1px solid #5555;
+}
+
+ul, ol {
+   margin-right: 15px;
+}
+
 body{
    min-height: 100vh;
    font-size: 16px;
@@ -102,6 +111,10 @@ main > h1 {
 main.dark > h1 { 
    background-color: #222;
    color: #eee;
+}
+
+h1.main-head {
+   padding: 50px 8px;
 }
 
 h2 {
