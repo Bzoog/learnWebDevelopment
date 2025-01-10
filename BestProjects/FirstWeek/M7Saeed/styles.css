@@ -1,0 +1,39 @@
+header{
+    background-color: #ffffff;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 6px;
+    margin: 20px;
+    box-shadow: #e0e0e0;
+    box-shadow: 0px 8px 20px rgb(0, 0, 0, 0.07);
+    font-weight: bold;
+}
+.profile{
+    
+    text-align: center;
+    border-radius: 50px;
+    object-fit: cover;
+    border: 1px solid #ccc
+}
+.Name{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: x-large;
+}
+.About{
+    background-color: #f7f7f7;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.AboutText{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+footer{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    margin: 10px;
+}
