@@ -1,0 +1,151 @@
+body {
+  background-color:#eee;
+  margin: 0 auto;
+  width: 300;
+  text-align: center;
+  background-image: url(image_body.jfif);
+   
+  background-size: cover;
+ 
+}
+
+.head {
+  margin-right: 200px;
+
+
+}
+
+.Div_profile {
+  border-radius: 8px;
+  padding: 8px;
+border:2px rgb(50, 50, 84) solid;
+  border-radius: 20px;
+  background-image: url(imagep.jfif);
+  background-size: cover;
+}
+
+.Div_profile img{
+  object-fit: cover;
+}
+
+.div_head {
+  padding: 15px 0;
+  background-color: rgba(168, 168, 237, 0.227);
+  border: 2px rgb(199, 199, 180) solid;
+border-radius: 20px;
+}
+
+.profile {
+  border-radius: 50px;
+  width: 200px;
+  height: 200px;
+  
+  
+  margin: 20px;
+  border:  2px solid rgb(136, 124, 124);
+  
+}
+
+a {
+  text-decoration: none;
+  color: rgb(9, 14, 19);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+}
+
+#expertise_java {
+  padding: 20px;
+  border-radius: 10px ;
+
+
+  background-color: rgb(170, 169, 253);
+  width: 400px;
+  margin: 10px;
+  
+}
+
+#expertise_html {
+
+  padding: 20px;
+  border-radius: 10px;
+
+
+  background-color: rgb(235, 224, 174);
+  width: 400px;
+  margin: 10px;
+}
+
+#expertise_css {
+  
+  padding: 20px;
+  border-radius: 20px;
+
+  background-color: rgb(179, 197, 235);
+  width: 400px;
+  margin: 10px;
+}
+
+#expertise_sql {
+  padding: 20px;
+  border-radius: 20px;
+
+  background-color: rgb(182, 200, 238);
+  width: 400px;
+  margin: 10px;
+}
+
+#expertise_father {
+  border: 2px rgb(86, 86, 88) solid;
+border-radius: 20px;
+
+
+
+  display: grid;
+  flex-direction: column ;
+
+  background-color: rgb(186, 186, 178)
+  padding: 50px;
+  justify-content: center;
+}
+
+.learning_resources {
+  background-color: rgb(211, 211, 213);
+  border-radius: 20px;
+border: 2px rgb(61, 59, 59) solid;
+}
+ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+il {
+  margin: 0 10px;
+display: flex;
+}
+.logo1 {
+  width: 100px;
+  border-radius: 50px;
+}
+
+.div_connect {
+
+  padding: 20px;
+  border-radius: 20px;
+border: 2px rgb(94, 92, 90) solid;
+  background-color: rgb(101, 114, 114);
+}
+
+.logo2 {
+  margin-right: 50px;
+  border-radius: 50px;
+}
+
+.text_Size {
+  font-size: 25PX;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
