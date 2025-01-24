@@ -1,0 +1,160 @@
+/* إعدادات عامة */
+*{
+   box-sizing: border-box;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   line-height: 1.6;
+   background-color: #f9f9f9;
+   color: #333;
+}
+
+/* الرأس */
+header {
+   background: #007bff;
+   color: #fff;
+   padding: 10px 20px;
+   text-align: center;
+}
+
+header h1 {
+   margin: 0;
+   font-size: 2.5rem;
+}
+
+nav ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   background: #0056b3;
+}
+
+nav ul li {
+   margin: 0;
+}
+
+nav ul li a {
+   color: #fff;
+   text-decoration: none;
+   padding: 10px 20px;
+   display: block;
+   transition: background 0.3s;
+}
+
+nav ul li a:hover {
+   background: #004085;
+}
+
+/* المحتوى الأساسي */
+main {
+   max-width: 800px;
+   margin: 20px auto;
+   padding: 20px;
+   background: #fff;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+   font-size: 2rem;
+   margin-bottom: 20px;
+}
+
+/* الأقسام داخل الرئيسية */
+section.blogs {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 20px;
+}
+
+section.blogs article {
+   background: #f4f4f4;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   padding: 15px;
+   transition: box-shadow 0.3s;
+}
+
+section.blogs article:hover {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section.blogs article h3 {
+   font-size: 1.5rem;
+   margin-bottom: 10px;
+}
+
+section.blogs article img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 5px;
+   margin-bottom: 10px;
+}
+
+section.blogs article p {
+   font-size: 1rem;
+   color: #555;
+}
+
+/* الأزرار */
+.button {
+   display: inline-block;
+   padding: 10px 15px;
+   background: #007bff;
+   color: #fff;
+   text-decoration: none;
+   border-radius: 5px;
+   transition: background 0.3s;
+}
+
+.button:hover {
+   background: #0056b3;
+}
+
+/* النماذج */
+form {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
+form label {
+   font-weight: bold;
+}
+
+form input,
+form textarea,
+form button {
+   padding: 10px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   font-size: 1rem;
+   width: 100%;
+}
+
+form button {
+   background: #007bff;
+   color: #fff;
+   cursor: pointer;
+   transition: background 0.3s;
+}
+
+form button:hover {
+   background: #0056b3;
+}
+
+/* التذييل */
+footer {
+   background: #333;
+   color: #fff;
+   text-align: center;
+   padding: 10px 0;
+   margin-top: 20px;
+   font-size: 0.9rem;
+}
