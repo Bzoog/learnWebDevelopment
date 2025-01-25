@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+   <link rel="stylesheet" href="../style.css">
+
+   <title>اليوم الأول: الجداول في HTML</title>
+</head>
+
+<body dir="rtl">
+
+
+   <main class="dark">
+      <span class="dark" id="turn_theme">فاتح</span>
+      <h1>اليوم الأول: الجداول في HTML</h1>
+      <p>في هذا الدرس، سنتعرف على الجداول في HTML التي تُستخدم لعرض البيانات بشكل منظم داخل الصفحات. سنشرح الوسوم الأساسية للجداول مدعومة بالأمثلة العملية.</p>
+      <div class="container">
+  
+          <!-- مقدمة عن الجداول -->
+          <section>
+              <h2>مقدمة عن الجداول</h2>
+              <p>الجداول في HTML تُستخدم لعرض البيانات على شكل صفوف وأعمدة، مما يُسهّل تنظيم المحتوى وفهمه.
+                  <span class="note">الوسوم الرئيسية المستخدمة لإنشاء الجداول هي <code>&lt;table&gt;</code> و<code>&lt;tr&gt;</code> و<code>&lt;th&gt;</code> و<code>&lt;td&gt;</code>.</span>
+              </p>
+          </section>
+  
+          <!-- شرح الوسوم الأساسية -->
+          <section>
+              <h2>الوسوم الأساسية للجداول</h2>
+              <p>فيما يلي شرح سريع للوسوم الأساسية المستخدمة في إنشاء الجداول:</p>
+              <div class="table-container">
+                  <table>
+                      <thead>
+                          <tr>
+                              <td>الوسم</td>
+                              <td>الوصف</td>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td class="left">&lt;table&gt;</td>
+                              <td>يُستخدم لإنشاء جدول.</td>
+                          </tr>
+                          <tr>
+                              <td class="left">&lt;tr&gt;</td>
+                              <td>يُستخدم لإنشاء صف داخل الجدول.</td>
+                          </tr>
+                          <tr>
+                              <td class="left">&lt;th&gt;</td>
+                              <td>يُستخدم لتحديد رأس عمود في الجدول.</td>
+                          </tr>
+                          <tr>
+                              <td class="left">&lt;td&gt;</td>
+                              <td>يُستخدم لتحديد خلية بيانات في الجدول.</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </section>
+  
+          <!-- أمثلة عملية -->
+          <section>
+              <h2>أمثلة على الجداول</h2>
+  
+              <h3>مثال 1: جدول بسيط</h3>
+              <p>هذا المثال يُظهر كيفية إنشاء جدول بسيط يحتوي على صفوف وأعمدة:</p>
+              <pre>
+  <code class="language-html" id="id-1">
+  &lt;table border="1">
+      &lt;tr>
+          &lt;th>العنوان 1&lt;/th>
+          &lt;th>العنوان 2&lt;/th>
+          &lt;th>العنوان 3&lt;/th>
+      &lt;/tr>
+      &lt;tr>
+          &lt;td>البيان 1&lt;/td>
+          &lt;td>البيان 2&lt;/td>
+          &lt;td>البيان 3&lt;/td>
+      &lt;/tr>
+      &lt;tr>
+          &lt;td>البيان 4&lt;/td>
+          &lt;td>البيان 5&lt;/td>
+          &lt;td>البيان 6&lt;/td>
+      &lt;/tr>
+  &lt;/table>
+  </code><button class="copy" onclick="copy('id-1', this)">نسخ</button>
+              </pre>
+  
+              <h3>مثال 2: جدول مع بيانات مرتبة</h3>
+              <p>يمكنك ترتيب البيانات داخل الجدول باستخدام وسوم إضافية:</p>
+              <pre>
+  <code class="language-html" id="id-2">
+  &lt;table border="1">
+      &lt;thead>
+          &lt;tr>
+              &lt;th>الرقم&lt;/th>
+              &lt;th>الاسم&lt;/th>
+              &lt;th>العمر&lt;/th>
+          &lt;/tr>
+      &lt;/thead>
+      &lt;tbody>
+          &lt;tr>
+              &lt;td>1&lt;/td>
+              &lt;td>أحمد&lt;/td>
+              &lt;td>25&lt;/td>
+          &lt;/tr>
+          &lt;tr>
+              &lt;td>2&lt;/td>
+              &lt;td>سارة&lt;/td>
+              &lt;td>30&lt;/td>
+          &lt;/tr>
+          &lt;tr>
+              &lt;td>3&lt;/td>
+              &lt;td>محمد&lt;/td>
+              &lt;td>28&lt;/td>
+          &lt;/tr>
+      &lt;/tbody>
+  &lt;/table>
+  </code><button class="copy" onclick="copy('id-2', this)">نسخ</button>
+              </pre>
+          </section>
+  
+      </div>
+      <br><br>
+
+      <section class="next-prev">
+         <a href="./day2.html"><button class="next">التالي</button></a>
+         <a><button class="prev">السابق</button></a>
+       </section>
+
+   </main>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+   <script src="../main.js"></script>
+   <script>
+      hljs.highlightAll()
+   </script>
+
+
+   <footer>
+      <div class="sabha">
+         سبحان الله وبحمده<br>
+         سبحان الله العظيم
+      </div>
+      <span>عِلم</span>
+   </footer>
+</body>
+
+</html>

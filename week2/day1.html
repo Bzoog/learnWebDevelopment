@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+   <link rel="stylesheet" href="../style.css">
+
+   <title>مدخل الى لغة CSS</title>
+</head>
+
+<body dir="rtl">
+
+
+   <main class="dark">
+      <span class="dark" id="turn_theme">فاتح</span>
+      <h1>مدخل الى لغة CSS</h1>
+      <p>كتابة التنسيقات في CSS</p>
+      <div class="container">
+
+
+         <section>
+            <h2>أماكن كتابة تنسيقات CSS</h2>
+            <p>
+               هناك ثلاث طرق أساسية لكتابة تنسيقات CSS
+            <h3>كتابة التنسيقات inline</h3>
+            <p>يتم كتابة التنسيقات مباشرة داخل وسم HTML باستخدام الخاصية style. تُستخدم هذه الطريقة لتطبيق التنسيق على
+               عنصر معين.</p>
+
+            </p>
+<pre>
+<code class="language-html" id="id-1">&lt;!DOCTYPE html>
+   &lt;html lang="en">
+   &lt;head>
+         &lt;title>مثال على CSS Inline&lt;/title>
+   &lt;/head>
+   &lt;body>
+   &lt;p style="color: red; background-color: yellow;">هذا نص بتنسيق Inline&lt;/p>
+   &lt;/body>
+   &lt;/html>
+</code><button class="copy" onclick="copy('id-1', this)">نسخ</button>
+</pre>
+            <h3>كتابة التنسيقات In Head</h3>
+            <p>يمكنك وضع التنسيقات داخل وسم &lt;style> في القسم &lt;head> من مستند HTML.</p>
+            <pre>
+<code class="language-html" id="id-2">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+      &lt;title>مثال على CSS في الرأس&lt;/title>
+      &lt;style>
+         p {
+            color: blue;
+            background-color: lightgray;
+         }
+      &lt;/style>
+&lt;/head>
+&lt;body>
+      &lt;p>هذا نص بتنسيق داخل الرأس&lt;/p>
+&lt;/body>
+&lt;/html>
+</code><button class="copy" onclick="copy('id-2', this)">نسخ</button>
+</pre>
+
+            <h3>كتابة التنسيقات في ملف خارجي (CSS File)</h3>
+            <p>أفضل الممارسات هي كتابة التنسيقات في ملف خارجي، حيث يتم استدعاء الملف باستخدام وسم &lt;link> داخل القسم &lt;head>.</p>
+            <h4>ملف HTML</h4>
+<pre>
+<code class="language-html" id="id-3">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;title>مثال على CSS في ملف خارجي&lt;/title>
+    &lt;link rel="stylesheet" href="styles.css">
+&lt;/head>
+&lt;body>
+    &lt;p>هذا نص بتنسيق من ملف خارجي&lt;/p>
+&lt;/body>
+&lt;/html>
+</code><button class="copy" onclick="copy('id-3', this)">نسخ</button>
+</pre>
+            <h4>ملف CSS (styles.css)</h4>
+<pre>
+<code class="language-css" id="id-4">
+p {
+   color: green;
+   background-color: lightyellow;
+}
+</code><button class="copy" onclick="copy('id-4', this)">نسخ</button>
+               </pre>
+         </section>
+
+
+         <section>
+            <h2> محددات الوصول في CSS</h2>
+            <p>
+               تحدد هذه المحددات العناصر التي يتم تطبيق التنسيقات عليها. تشمل الأنواع الأساسية
+               <h3>محدد العنصر (Tag Name)</h3>
+               <p>يستهدف جميع العناصر ذات الاسم المحدد.</p>
+            </p>
+
+            <pre>
+<code class="language-css" id="id-5">
+h1 {
+   color: navy;
+}
+</code><button class="copy" onclick="copy('id-5', this)">نسخ</button>
+</pre>
+            <h3>محدد الصنف (Class)</h3>
+            <p>يستهدف العناصر التي تحتوي على قيمة محددة في الخاصية class.</p>
+<pre><code class="language-html" id="id-6">&lt;p class="highlight">هذا نص بتنسيق باستخدام صنف&lt;/p>
+</code><button class="copy" onclick="copy('id-6', this)">نسخ</button></pre>
+            <h4>تنسيق css</h4>
+<pre><code class="language-css" id="id-7">.highlight {
+   color: orange;
+   background-color: black;
+}
+</code><button class="copy" onclick="copy('id-7', this)">نسخ</button>
+   </pre>
+
+            <h3>محدد المعرف (ID)</h3>
+            <p>يستهدف عنصرًا فريدًا يحتوي على خاصية id.</p>
+<pre><code class="language-html" id="id-8">&lt;p id="unique">هذا نص بتنسيق باستخدام معرف</p>
+</code><button class="copy" onclick="copy('id-8', this)">نسخ</button></pre>
+            <h4>تنسيق css</h4>
+<pre><code class="language-css" id="id-9">#unique {
+   color: purple;
+   font-weight: bold;
+}           
+</code><button class="copy" onclick="copy('id-9', this)">نسخ</button>
+   </pre>
+         </section>
+
+
+         <section>
+            <h2>SectionTitle</h2>
+            <div class="table-container">
+
+               <table border="1">
+                  <thead>
+                      <tr>
+                          <th>العنصر</th>
+                          <th>الوصف</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td class="left">Inline</td>
+                          <td>تنسيق داخل العنصر باستخدام الخاصية <code>style</code>.</td>
+                      </tr>
+                      <tr>
+                          <td class="left">In Head</td>
+                          <td>تنسيق داخل وسم <code>&lt;style&gt;</code> في القسم <code>&lt;head&gt;</code>.</td>
+                      </tr>
+                      <tr>
+                          <td class="left">CSS File</td>
+                          <td>تنسيق في ملف خارجي يتم ربطه بـ <code>&lt;link&gt;</code>.</td>
+                      </tr>
+                      <tr>
+                          <td class="left">Tag Name</td>
+                          <td>استهداف العناصر باستخدام اسم الوسم.</td>
+                      </tr>
+                      <tr>
+                          <td class="left">Class</td>
+                          <td>استهداف العناصر باستخدام الخاصية <code>class</code>.</td>
+                      </tr>
+                      <tr>
+                          <td class="left">ID</td>
+                          <td>استهداف عنصر فريد باستخدام الخاصية <code>id</code>.</td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+         </section>
+
+      </div>
+      <br><br>
+
+      
+         <section class="next-prev">
+            <a href="./day2.html"><button class="next">التالي</button></a>
+            <a><button class="prev">السابق</button></a>
+          </section>
+   </main>
+
+    
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+   <script src="../main.js"></script>
+   <script>
+      hljs.highlightAll()
+   </script>
+
+
+   <footer>
+      <div class="sabha">
+         سبحان الله وبحمده<br>
+         سبحان الله العظيم
+      </div>
+      <span>عِلم</span>
+   </footer>
+</body>
+
+</html>

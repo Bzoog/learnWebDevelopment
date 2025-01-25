@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+   <link rel="stylesheet" href="../style.css">
+
+   <title>اليوم الرابع: تنسيقات Flexbox</title>
+</head>
+
+<body dir="rtl">
+
+
+    <main class="dark">
+        <span class="dark" id="turn_theme">فاتح</span>
+        <h1>اليوم الرابع: تنسيقات Flexbox</h1>
+        <p>في هذا الدرس، سنتعرف على تقنية Flexbox، التي تُستخدم لتنظيم العناصر داخل الصفحات بسهولة ومرونة. سنشرح الخصائص الرئيسية لـ Flexbox مدعومة بالأمثلة العملية.</p>
+        <div class="container">
+    
+            <!-- المقدمة عن Flexbox -->
+            <section>
+                <h2>مقدمة عن Flexbox</h2>
+                <p>Flexbox (التخطيط المرن) هو نموذج لتصميم التخطيط في CSS يجعل من السهل ترتيب العناصر داخل الحاويات. يتم استخدامه لإنشاء تخطيطات مرنة وقابلة للتكيّف مع أحجام الشاشات المختلفة.
+                    <span class="note">الميزة الرئيسية لـ Flexbox هي التحكم في اتجاه وحجم العناصر داخل الحاوية.</span>
+                </p>
+            </section>
+    
+            <!-- الخصائص المطلوبة -->
+            <section>
+                <h2>الخصائص الرئيسية لـ Flexbox</h2>
+                <p>يمكنك استخدام الخصائص التالية لتخصيص تنسيق العناصر داخل الحاوية:</p>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>الخاصية</td>
+                                <td>الوصف</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="left">display: flex</td>
+                                <td>يُحوّل الحاوية إلى Flex Container لتفعيل خصائص Flexbox على العناصر الداخلية.</td>
+                            </tr>
+                            <tr>
+                                <td class="left">flex-direction</td>
+                                <td>تحدد اتجاه العناصر داخل الحاوية (أفقي أو عمودي).</td>
+                            </tr>
+                            <tr>
+                                <td class="left">flex-wrap</td>
+                                <td>تحدد ما إذا كان يتم نقل العناصر إلى صفوف أو أعمدة جديدة عند عدم توفر مساحة كافية.</td>
+                            </tr>
+                            <tr>
+                                <td class="left">gap</td>
+                                <td>تحدد المسافة بين العناصر داخل الحاوية.</td>
+                            </tr>
+                            <tr>
+                                <td class="left">justify-content</td>
+                                <td>تحدد كيفية توزيع العناصر أفقياً.</td>
+                            </tr>
+                            <tr>
+                                <td class="left">align-items</td>
+                                <td>تحدد كيفية محاذاة العناصر عمودياً.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+    
+            <!-- أمثلة عملية -->
+            <section>
+                <h2>أمثلة على Flexbox</h2>
+    
+                <h3>مثال 1: الحاوية الأساسية</h3>
+                <p>هذا المثال يُظهر كيفية تحويل حاوية إلى Flex Container وترتيب العناصر بداخلها:</p>
+                <pre><code class="language-html" id="id-1">
+&lt;div style="display: flex; gap: 10px;">
+    &lt;div style="background: lightblue; padding: 10px;">عنصر 1&lt;/div>
+    &lt;div style="background: lightgreen; padding: 10px;">عنصر 2&lt;/div>
+    &lt;div style="background: lightcoral; padding: 10px;">عنصر 3&lt;/div>
+&lt;/div>
+</code><button class="copy" onclick="copy('id-1', this)">نسخ</button></pre>
+    
+                <h3>مثال 2: اتجاه العناصر</h3>
+                <p>توضيح خاصية <code>flex-direction</code> وكيفية تغيير الاتجاه:</p>
+                <pre>
+    <code class="language-html" id="id-2">
+&lt;div style="display: flex; flex-direction: column; gap: 10px;">
+    &lt;div style="background: lightblue; padding: 10px;">عنصر 1&lt;/div>
+    &lt;div style="background: lightgreen; padding: 10px;">عنصر 2&lt;/div>
+    &lt;div style="background: lightcoral; padding: 10px;">عنصر 3&lt;/div>
+&lt;/div>
+</code><button class="copy" onclick="copy('id-2', this)">نسخ</button></pre>
+    
+                <h3>مثال 3: المحاذاة والتوزيع</h3>
+                <p>مثال على استخدام <code>justify-content</code> و <code>align-items</code>:</p>
+                <pre>
+    <code class="language-html" id="id-3">
+&lt;div style="display: flex; justify-content: center; align-items: center; height: 200px; border: 1px solid #000;">
+    &lt;div style="background: lightblue; padding: 10px;">عنصر 1&lt;/div>
+    &lt;div style="background: lightgreen; padding: 10px;">عنصر 2&lt;/div>
+    &lt;div style="background: lightcoral; padding: 10px;">عنصر 3&lt;/div>
+&lt;/div>
+</code><button class="copy" onclick="copy('id-3', this)">نسخ</button></pre>
+            </section>
+    
+        </div>
+        <br><br>
+        
+            <section class="next-prev">
+                <a href="../"><button class="next">الرئيسية</button></a>
+                <a href="./day3.html"><button class="prev">السابق</button></a>
+              </section>
+            
+          
+    </main>
+    
+  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+   <script src="../main.js"></script>
+   <script>
+      hljs.highlightAll()
+   </script>
+
+
+   <footer>
+      <div class="sabha">
+         سبحان الله وبحمده<br>
+         سبحان الله العظيم
+      </div>
+      <span>عِلم</span>
+   </footer>
+</body>
+
+</html>

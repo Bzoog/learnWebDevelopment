@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+   <link rel="stylesheet" href="../style.css">
+
+   <title>اليوم الثالث: حقول إدخال القيم من المستخدم</title>
+</head>
+
+<body dir="rtl">
+
+
+    <main class="dark">
+        <span class="dark" id="turn_theme">فاتح</span>
+        <h1>اليوم الثالث: حقول إدخال القيم من المستخدم</h1>
+        <p>في هذا الدرس، سنتعرف على كيفية إنشاء نماذج تفاعلية (Forms) تُستخدم لجمع بيانات المستخدم، مع شرح تفصيلي للوسوم والخصائص المرتبطة بها، مدعومة بالأمثلة العملية.</p>
+        <div class="container">
+    
+            <!-- الوسوم المطلوبة -->
+            <section>
+                <h2>الوسوم الأساسية لإنشاء النماذج</h2>
+                <p>لتصميم النماذج، نستخدم الوسوم التالية:
+                    <span class="note">ينبغي استخدام الوسوم بشكل صحيح لضمان التوافقية وإمكانية الوصول.</span>
+                </p>
+    
+                <h3>1. الوسم Form</h3>
+                <p>يُستخدم لتعريف النموذج ككل. يمكن أن يحتوي على وسوم إدخال بيانات (input) ووسوم أخرى.</p>
+                <pre>
+<code class="language-html" id="id-1">
+&lt;form action="/submit-data">
+    <!-- محتوى النموذج -->
+&lt;/form>
+</code><button class="copy" onclick="copy('id-1', this)">نسخ</button> </pre>
+    
+                <h3>2. الوسم Label</h3>
+                <p>يُستخدم لربط وصف نصي بحقل إدخال لزيادة قابلية الاستخدام.</p>
+                <pre>
+<code class="language-html" id="id-2">
+&lt;label for="username">اسم المستخدم:&lt;/label>
+&lt;input type="text" id="username" name="username">
+</code><button class="copy" onclick="copy('id-2', this)">نسخ</button></pre>
+    
+                <h3>3. الوسم Input</h3>
+                <p>يُستخدم لإنشاء حقول إدخال مختلفة، مثل النصوص والأرقام وكلمات المرور.
+                    <span class="note">نوع الإدخال يتم تحديده باستخدام الخاصية <code>type</code>.</span>
+                </p>
+                <pre>
+<code class="language-html" id="id-3">
+&lt;input type="text" placeholder="أدخل اسمك">
+</code><button class="copy" onclick="copy('id-3', this)">نسخ</button></pre>
+            </section>
+    
+            <!-- خصائص الوسوم -->
+            <section>
+                <h2>الخصائص المرتبطة بالوسوم</h2>
+                <p>كل وسم يمكن تخصيصه باستخدام خصائص مختلفة.
+                    <span class="note">الخصائص تجعل النماذج أكثر ديناميكية وتفاعلية.</span>
+                </p>
+    
+                <h3>خصائص الوسم Input</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>الخاصية</td>
+                                <td>الوصف</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="left">type</td>
+                                <td>تحدد نوع الإدخال (مثل نص أو رقم).</td>
+                            </tr>
+                            <tr>
+                                <td class="left">placeholder</td>
+                                <td>نص إرشادي يظهر داخل الحقل عندما يكون فارغًا.</td>
+                            </tr>
+                            <tr>
+                                <td class="left">value</td>
+                                <td>تحدد قيمة افتراضية للحقل.</td>
+                            </tr>
+                            <tr>
+                                <td class="left">min و max</td>
+                                <td>يُستخدمان لتحديد القيم الدنيا والعليا للإدخال.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <h3>خصائص الوسم Form</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>الخاصية</td>
+                                <td>الوصف</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="left">action</td>
+                                <td>تحدد رابط الصفحة التي ستُرسل إليها البيانات بعد الإرسال.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <h3>خصائص الوسم Label</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>الخاصية</td>
+                                <td>الوصف</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="left">for</td>
+                                <td>تربط الوسم <code>label</code> بحقل إدخال باستخدام معرف (id).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+    
+            <!-- أمثلة على القيم -->
+            <section>
+                <h2>القيم اللازمة للخاصية Type</h2>
+                <p>الخاصية <code>type</code> تدعم عدة قيم، مثل:</p>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>القيمة</td>
+                                <td>الوصف</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="left">text</td>
+                                <td>حقل نصي لإدخال النصوص.</td>
+                            </tr>
+                            <tr>
+                                <td class="left">number</td>
+                                <td>حقل لإدخال الأرقام فقط.</td>
+                            </tr>
+                            <tr>
+                                <td class="left">submit</td>
+                                <td>زر لإرسال البيانات.</td>
+                            </tr>
+                            <tr>
+                                <td class="left">date</td>
+                                <td>حقل لاختيار التواريخ.</td>
+                            </tr>
+                            <tr>
+                                <td class="left">password</td>
+                                <td>حقل لإدخال كلمات المرور (تظهر كنقاط).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <h3>مثال عملي</h3>
+                <pre>
+<code class="language-html" id="id-4">
+&lt;form action="/submit-data">
+    &lt;label for="email">البريد الإلكتروني:&lt;/label>
+    &lt;input type="text" id="email" placeholder="example@mail.com">
+
+    &lt;label for="age">العمر:&lt;/label>
+    &lt;input type="number" id="age" min="18" max="100">
+
+    &lt;label for="dob">تاريخ الميلاد:&lt;/label>
+    &lt;input type="date" id="dob">
+
+    &lt;label for="password">كلمة المرور:&lt;/label>
+    &lt;input type="password" id="password" placeholder="********">
+
+    &lt;input type="submit" value="إرسال">
+&lt;/form>
+</code><button class="copy" onclick="copy('id-4', this)">نسخ</button></pre>
+            </section>
+    
+        </div>
+        <br><br>
+        
+        <section class="next-prev">
+            <a href="./day4.html"><button class="next">التالي</button></a>
+            <a href="./day2.html"><button class="prev">السابق</button></a>
+          </section>
+      
+    </main>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+   <script src="../main.js"></script>
+   <script>
+      hljs.highlightAll()
+   </script>
+
+
+   <footer>
+      <div class="sabha">
+         سبحان الله وبحمده<br>
+         سبحان الله العظيم
+      </div>
+      <span>عِلم</span>
+   </footer>
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+   <link rel="stylesheet" href="../style.css">
+
+   <title>تابع الخصائص الأساسية ووحدات القياس</title>
+</head>
+
+<body dir="rtl">
+
+
+   <main class="dark">
+      <span class="dark" id="turn_theme">فاتح</span>
+      <h1>اليوم الثاني: تابع الخصائص الأساسية ووحدات القياس</h1>
+      <p>في هذا الدرس، سنتعرف بشكل مفصل على الخصائص الأساسية للتحكم في أبعاد ومسافات العناصر، بالإضافة إلى وحدات القياس المختلفة المستخدمة في CSS لتحديد الأحجام والزوايا. سنوضح كيف تعمل كل خاصية مع أمثلة عملية وشروحات مبسطة.</p>
+      <div class="container">
+  
+          <!-- الخصائص الأساسية -->
+          <section>
+              <h2>الخصائص الأساسية</h2>
+              <p>الخصائص الأساسية تساعد في تنسيق الأبعاد والمسافات حول العناصر، مما يسمح بتخصيص تصميم العناصر بطريقة أكثر مرونة. إليك الخصائص بالتفصيل:
+                  <span class="note">
+                      من المهم تجربة هذه الخصائص عمليًا لفهم كيفية تأثيرها على العنصر.
+                  </span>
+              </p>
+  
+              <h3>1. خاصية Margin</h3>
+              <p>تُستخدم لتحديد المسافة الخارجية حول العنصر (المساحة بين العنصر والعناصر الأخرى). يمكن تحديد قيم مختلفة لجميع الاتجاهات.</p>
+              <pre>
+  <code class="language-css" id="id-1">
+  /* مثال على margin */
+  div {
+      margin: 10px; /* مسافة خارجية لجميع الجوانب */
+      margin-top: 20px; /* مسافة من الأعلى */
+      margin-right: 15px; /* مسافة من اليمين */
+      margin-bottom: 10px; /* مسافة من الأسفل */
+      margin-left: 5px; /* مسافة من اليسار */
+  }
+  </code><button class="copy" onclick="copy('id-1', this)">نسخ</button>
+              </pre>
+  
+              <h3>2. خاصية Padding</h3>
+              <p>تُستخدم لتحديد المسافة الداخلية بين محتوى العنصر وحدوده.</p>
+              <pre>
+  <code class="language-css" id="id-2">
+  /* مثال على padding */
+  div {
+      padding: 10px; /* مسافة داخلية لجميع الجوانب */
+      padding-top: 20px; /* مسافة من الأعلى */
+      padding-right: 15px; /* مسافة من اليمين */
+      padding-bottom: 10px; /* مسافة من الأسفل */
+      padding-left: 5px; /* مسافة من اليسار */
+  }
+  </code><button class="copy" onclick="copy('id-2', this)">نسخ</button>
+              </pre>
+  
+              <h3>3. خاصية Border</h3>
+              <p>تُستخدم لإنشاء حدود حول العنصر. يمكن تحديد السمك والنمط واللون.</p>
+              <pre>
+  <code class="language-css" id="id-3">
+  /* مثال على border */
+  div {
+      border: 2px solid black; /* حدود سوداء بلون صلب */
+      border-width: 4px; /* سمك الحدود */
+      border-style: dashed; /* نمط الحدود (متقطعة) */
+      border-color: red; /* لون الحدود */
+  }
+  </code><button class="copy" onclick="copy('id-3', this)">نسخ</button>
+              </pre>
+  
+              <h3>4. خاصية Border-Radius</h3>
+              <p>تُستخدم لتقويس زوايا العنصر.</p>
+              <pre>
+  <code class="language-css" id="id-4">
+  /* مثال على border-radius */
+  div {
+      border: 1px solid black;
+      border-radius: 10px; /* تقويس جميع الزوايا */
+      border-top-left-radius: 20px; /* تقويس الزاوية العليا اليسرى */
+      border-bottom-right-radius: 15px; /* تقويس الزاوية السفلى اليمنى */
+  }
+  </code><button class="copy" onclick="copy('id-4', this)">نسخ</button>
+              </pre>
+  
+              <h3>5. خاصيتا Width و Height</h3>
+              <p>تُستخدم لتحديد عرض وارتفاع العنصر.</p>
+              <pre>
+  <code class="language-css" id="id-5">
+  /* مثال على width و height */
+  div {
+      width: 300px; /* عرض العنصر */
+      height: 200px; /* ارتفاع العنصر */
+  }
+  </code><button class="copy" onclick="copy('id-5', this)">نسخ</button>
+              </pre>
+          </section>
+  
+          <!-- وحدات القياس -->
+          <section>
+              <h2>وحدات القياس</h2>
+              <p>CSS توفر مجموعة واسعة من وحدات القياس لتحديد الأحجام والزوايا:
+                  <span class="note">
+                      استخدم وحدات القياس النسبية مثل <code>em</code> و<code>rem</code> لتحسين مرونة التصميم.
+                  </span>
+              </p>
+  
+              <h3>أنواع وحدات القياس</h3>
+              <div class="table-container">
+                  <table>
+                      <thead>
+                          <tr>
+                              <td>الوحدة</td>
+                              <td>الوصف</td>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td class="left">px</td>
+                              <td>بيكسل - وحدة ثابتة لقياس الأحجام.</td>
+                          </tr>
+                          <tr>
+                              <td class="left">em</td>
+                              <td>نسبة إلى حجم الخط الخاص بالعنصر الأب.</td>
+                          </tr>
+                          <tr>
+                              <td class="left">rem</td>
+                              <td>نسبة إلى حجم الخط الخاص بعنصر الجذر (HTML).</td>
+                          </tr>
+                          <tr>
+                              <td class="left">deg</td>
+                              <td>الدرجات - تُستخدم مع التدوير والتحويلات.</td>
+                          </tr>
+                          <tr>
+                              <td class="left">vw</td>
+                              <td>1% من عرض نافذة العرض (Viewport).</td>
+                          </tr>
+                          <tr>
+                              <td class="left">vh</td>
+                              <td>1% من ارتفاع نافذة العرض (Viewport).</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+  
+              <h3>أمثلة على وحدات القياس</h3>
+              <pre>
+  <code class="language-css" id="id-6">
+  /* مثال على وحدات القياس */
+  div {
+      font-size: 16px; /* بيكسل */
+      margin: 1em; /* نسبة إلى الخط */
+      padding: 1rem; /* نسبة إلى الجذر */
+      transform: rotate(45deg); /* الدرجات */
+      width: 50vw; /* نسبة إلى عرض النافذة */
+      height: 50vh; /* نسبة إلى ارتفاع النافذة */
+  }
+  </code><button class="copy" onclick="copy('id-6', this)">نسخ</button>
+              </pre>
+          </section>
+  
+      </div>
+      <br><br>
+      
+        <section class="next-prev">
+         <a href="./day3.html"><button class="next">التالي</button></a>
+         <a href="./day1.html"><button class="prev">السابق</button></a>
+       </section>
+        
+        
+  </main>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+   <script src="../main.js"></script>
+   <script>
+      hljs.highlightAll()
+   </script>
+
+
+   <footer>
+      <div class="sabha">
+         سبحان الله وبحمده<br>
+         سبحان الله العظيم
+      </div>
+      <span>عِلم</span>
+   </footer>
+</body>
+
+</html>

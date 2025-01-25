@@ -7,8 +7,14 @@
    padding: 0;
    margin: 0;
    box-sizing: border-box;
-   font-family: 'Cairo', sans-serif;
    transition: 0.3s;
+}
+*:not(pre *){
+   font-family: 'Cairo', sans-serif;
+}
+
+pre button {
+   font-family: 'Cairo';
 }
 
 hr {
@@ -29,6 +35,9 @@ main {
    background-color: #fafafa;
    min-height: 100vh;
    color: #000;
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
 }
 
 main.dark { 
@@ -67,7 +76,40 @@ main > p {
 main .container{
    padding: 12px;
    max-width: 900px;
+   width: min(900px, 90%);
    margin: 0 auto;
+}
+
+.index .container {
+   flex-grow: 1;
+   display: flex;
+   gap: 8px;
+   flex-wrap: wrap;
+}
+
+.week { 
+   padding: min(8%, 20px);
+   border: 1px solid #000;
+   border-radius: 8px;
+   flex-grow: 1;
+   position: relative;
+   box-sizing: border-box;
+}
+
+main.dark .week {
+   border: 1px solid #eee3;
+}
+
+.week h2 {
+   background-color: #0003;
+   border-radius: 4px;
+   position: sticky;
+   top: 0;
+   padding: 8px;
+}
+
+main.dark .week h2 {
+   background-color: #fff3;
 }
 
 p {
@@ -260,8 +302,33 @@ main.dark .output{
    background-color: #222;
 }
 
+.next-prev {
+   padding: 20px;
+   display: flex;
+   gap: 8px;
+   justify-content: space-between;
+   min-width: min(90%, 500px);
+   margin: 0 auto;
+   /* background-color: #fff2; */
+   border-radius: 8px;
+}
 
+.next-prev button {
+   padding: 8px;
+   border: none;
+   border-radius: 4px;
+   width: 100px;
+   cursor: pointer;
+   transition: 0.3s;
+}
 
+.next-prev a:not(a[href]){
+   opacity: 0.3;
+}
+
+.next-prev button:hover {
+   background-color: #ccc;
+}
 
 
 

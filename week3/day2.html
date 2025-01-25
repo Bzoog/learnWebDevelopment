@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+   <link rel="stylesheet" href="../style.css">
+
+   <title>اليوم الثاني: تنسيق الخطوط في CSS</title>
+</head>
+
+<body dir="rtl">
+
+
+    <main class="dark">
+        <span class="dark" id="turn_theme">فاتح</span>
+        <h1>اليوم الثاني: تنسيق الخطوط في CSS</h1>
+        <p>في هذا الدرس، سنتعرف على خصائص CSS التي تُستخدم لتنسيق النصوص وضبط مظهرها داخل صفحات الويب. سنشرح الخصائص المطلوبة مدعومة بالأمثلة العملية.</p>
+        <div class="container">
+    
+            <!-- مقدمة عن تنسيق الخطوط -->
+            <section>
+                <h2>مقدمة عن تنسيق الخطوط</h2>
+                <p>CSS توفر مجموعة واسعة من الخصائص لتنسيق النصوص، مما يسمح للمطورين بالتحكم الكامل في مظهر النصوص مثل المحاذاة، الحجم، النمط، والمسافات.
+                    <span class="note">تساعد هذه الخصائص في تحسين قراءة النصوص وجعلها متوافقة مع تصميم الموقع.</span>
+                </p>
+            </section>
+    
+            <!-- الخصائص المطلوبة -->
+            <section>
+                <h2>الخصائص الأساسية لتنسيق النصوص</h2>
+                <p>فيما يلي شرح موجز للخصائص الأساسية المستخدمة في تنسيق النصوص:</p>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>الخاصية</td>
+                                <td>الوصف</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="left">text-decoration</td>
+                                <td>تُستخدم لإضافة خطوط على النصوص (مثل خط تحت النص أو خط فوق النص).</td>
+                            </tr>
+                            <tr>
+                                <td class="left">text-align</td>
+                                <td>تحدد محاذاة النصوص داخل العنصر (يمين، يسار، وسط، مبرر).</td>
+                            </tr>
+                            <tr>
+                                <td class="left">font-weight</td>
+                                <td>تحدد سماكة النص (عادي، عريض، أو باستخدام القيم الرقمية مثل 400 أو 700).</td>
+                            </tr>
+                            <tr>
+                                <td class="left">font-style</td>
+                                <td>تُستخدم لتحديد نمط النص (عادي أو مائل).</td>
+                            </tr>
+                            <tr>
+                                <td class="left">font-family</td>
+                                <td>تحدد نوع الخط المُستخدم في النصوص.</td>
+                            </tr>
+                            <tr>
+                                <td class="left">line-height</td>
+                                <td>تحدد ارتفاع السطر.</td>
+                            </tr>
+                            <tr>
+                                <td class="left">letter-spacing</td>
+                                <td>تُستخدم لتحديد المسافة بين الأحرف داخل النص.</td>
+                            </tr>
+                            <tr>
+                                <td class="left">word-spacing</td>
+                                <td>تُستخدم لتحديد المسافة بين الكلمات.</td>
+                            </tr>
+                            <tr>
+                                <td class="left">text-transform</td>
+                                <td>تحدد تحويل النصوص إلى أحرف كبيرة أو صغيرة.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+    
+            <!-- أمثلة عملية -->
+            <section>
+                <h2>أمثلة على تنسيق النصوص</h2>
+    
+                <h3>مثال 1: إضافة خط تحت النص</h3>
+                <p>يمكنك استخدام خاصية <code>text-decoration</code> لإضافة خط تحت النص:</p>
+                <pre>
+    <code class="language-html" id="id-1">
+    &lt;p style="text-decoration: underline;">هذا نص مع خط تحت النص.&lt;/p>
+    </code><button class="copy" onclick="copy('id-1', this)">نسخ</button>
+                </pre>
+    
+                <h3>مثال 2: محاذاة النص إلى الوسط</h3>
+                <p>يمكنك ضبط محاذاة النصوص باستخدام <code>text-align</code>:</p>
+                <pre>
+    <code class="language-html" id="id-2">
+    &lt;p style="text-align: center;">هذا النص في الوسط.&lt;/p>
+    </code><button class="copy" onclick="copy('id-2', this)">نسخ</button>
+                </pre>
+    
+                <h3>مثال 3: التحكم في سماكة الخط</h3>
+                <p>يمكنك تعديل سماكة النص باستخدام خاصية <code>font-weight</code>:</p>
+                <pre>
+    <code class="language-html" id="id-3">
+    &lt;p style="font-weight: bold;">هذا النص عريض.&lt;/p>
+    </code><button class="copy" onclick="copy('id-3', this)">نسخ</button>
+                </pre>
+    
+                <h3>مثال 4: ضبط نوع الخط</h3>
+                <p>لتغيير نوع الخط، يمكنك استخدام خاصية <code>font-family</code>:</p>
+                <pre>
+    <code class="language-html" id="id-4">
+    &lt;p style="font-family: Arial, sans-serif;">هذا النص يستخدم خط Arial.&lt;/p>
+    </code><button class="copy" onclick="copy('id-4', this)">نسخ</button>
+                </pre>
+    
+                <h3>مثال 5: ضبط ارتفاع السطر</h3>
+                <p>لتحديد المسافة بين السطور، استخدم خاصية <code>line-height</code>:</p>
+                <pre>
+    <code class="language-html" id="id-5">
+    &lt;p style="line-height: 2;">هذا النص يحتوي على ارتفاع سطر مضاعف.&lt;/p>
+    </code><button class="copy" onclick="copy('id-5', this)">نسخ</button>
+                </pre>
+    
+            </section>
+    
+        </div>
+        <br><br>
+        
+      <section class="next-prev">
+         <a href="./day2.html"><button class="next">التالي</button></a>
+         <a><button class="prev">السابق</button></a>
+       </section>
+
+   </main>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+   <script src="../main.js"></script>
+   <script>
+      hljs.highlightAll()
+   </script>
+
+
+   <footer>
+      <div class="sabha">
+         سبحان الله وبحمده<br>
+         سبحان الله العظيم
+      </div>
+      <span>عِلم</span>
+   </footer>
+</body>
+
+</html>
